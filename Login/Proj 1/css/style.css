@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Alkatra', 'open-sans';
+}
+
+body {
+    background-image: url("../../../img/background\ maior.jpg");
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: 99vh;
+    min-width: 20vw;
+    background-color: #1E1B30;
+
+    border-radius: 20px;
+    margin-top: 3px;
+}
+
+.externo {
+    color: aliceblue;
+    border-radius: 3%;
+    
+    padding: 5px;
+    max-width: 95vw;
+    max-height: 80vh;    
+}
+
+.interno {
+    padding: 15px;
+    
+    max-width: 89vw;
+    max-height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.interno > * {
+    margin: 10px 0px;
+}
+
+img {
+    max-width: 45vw;
+}
+
+.interno > .info-login {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin: 10px;
+    
+    max-width: 72%;
+}
+
+.interno > .info-login > span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.interno > .info-login > p {
+    color: #605D66;
+    font-size: 12px;
+    width: 100%;
+}
+
+#classes {
+    border-radius: 10px;
+    padding: 8px 26px;
+    display: flex;
+    justify-content: start;
+    
+    max-width: 60%;
+}
+
+#classes:hover {
+    background-color: #39304D;
+}
+
+#classes > .icon {
+    display: flex;
+    align-items: end;
+    margin-right: 10px;
+}
+
+#classes > div {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+#classes > div > span {
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#classes > div > input {
+    text-decoration: none; 
+    background-color: transparent; 
+    border: none;
+    outline: none;
+    max-width: 23vw;
+}
+
+#classes > div > input::placeholder {
+    font-family: 'Alkatra', 'open-sans';
+    font-size: 16px;
+}
+
+#classes > div > img {
+    height: 24px;
+    width: 24px;
+}
+
+.interno > .secao-btn-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 60%;
+}
+
+.secao-btn-login > button {
+    padding: 12px 60px;
+    
+    background-color: #17F1DE;
+    border: none;
+    border-radius: 25px;
+    
+}
+
+.secao-btn-login > span > a{
+    color: #17F1DE;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.interno > p {
+    font-size: 12px;
+    /* border: 1px solid white; */
+    color: #605D66;
+}
+
+.interno > p > a{
+    text-decoration: none;
+    color: #17F1DE;
+}
+
+@media screen and (min-width: 600px) {
+    .interno {
+        margin-top: 5px;
+        
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
+    #classes > div > input {
+        max-width: 40vw;
+    }
+}
