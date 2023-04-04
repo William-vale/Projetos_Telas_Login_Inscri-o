@@ -1,0 +1,134 @@
+:root {
+
+    /* Cores */
+    --preto: black;
+    --cor-primaria: #000024;
+    --cor-secundaria: #0d1f26;
+    --cor-tercearia: #1a3e4c;
+    --cor-quaternaria: #4d4d4d;
+    --cor-cinco: #666666;
+    --cor-seis: #a8c4a2;
+    --cor-sete: #e5eaa4;
+    --branco: white;
+    /* Tamanho de fonts */
+    --h1: 4rem;
+    --h2: 3.5rem;
+    --h3: 3rem;
+    --h4: 2.5rem;
+    --h5: 2rem;
+    --h6: 1.5rem;
+    --h7: 1rem;
+}   
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+	width: 100vw;
+    height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: linear-gradient(to bottom, /* #0f0c29, #302b63, #24243e */ var(--cor-primaria), var(--cor-tercearia), var(--cor-secundaria));
+}
+
+main{
+	width: 350px;
+	height: 500px;
+    overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px /* #000 */ var(--preto);
+}
+
+#chk{
+	display: none;
+}
+
+.criacao-login{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+
+label{
+	color: var(--branco);
+	font-size: var(--h4);
+	display: flex;
+	justify-content: center;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+input{
+    width: 60%;
+    height: 20px;
+	background: var(--cor-seis);
+	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+input::placeholder{
+    color: var(--cor-secundaria);
+}
+
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	display: block;
+	justify-content: center;
+	color: var(--branco);
+	background: var(--cor-quaternaria);
+	font-size: var(--h7);
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+button:hover{
+	background: var(--cor-cinco);
+}
+ 
+.login{
+	height: 460px;
+	background: var(--cor-sete);
+	border-radius: 40% / 15%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+
+.login label{
+	color: var(--cor-cinco);
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{ /* Ativa a tela Login */
+	transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label{ /* Aumenta o nome Login */
+	transform: scale(1);	
+}
+
+#chk:checked ~ .criacao-login label{ /* Diminui o nome criar conta */
+	transform: scale(.6);
+}
